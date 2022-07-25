@@ -1,6 +1,7 @@
 package com.example.springbootstudy.aop;
 
 import com.example.springbootstudy.aop.dto.MemberDto;
+import com.example.springbootstudy.aop.timeraop.annotation.Timer;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -24,5 +25,11 @@ public class RestApiController {
     @PostMapping("/post")
     public MemberDto post(@RequestBody MemberDto memberDto) {
         return memberDto;
+    }
+
+    @Timer
+    @DeleteMapping("/delete")
+    public void delete() throws InterruptedException {
+        Thread.sleep(1000 * 2);;
     }
 }
