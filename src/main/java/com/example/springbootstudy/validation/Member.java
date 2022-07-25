@@ -1,10 +1,8 @@
 package com.example.springbootstudy.validation;
 
+import com.example.springbootstudy.validation.annotation.YearMonth;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.validation.constraints.*;
 
@@ -17,6 +15,7 @@ import javax.validation.constraints.*;
 
 @Getter
 @Builder
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 public class Member {
@@ -36,5 +35,9 @@ public class Member {
     @Size(max = 11)
     @JsonProperty("phone_number")
     private String phoneNumber;
+
+    @JsonProperty("req_year_month")
+    @YearMonth
+    private String reqYearMonth; // yyyy/mm/dd
 
 }

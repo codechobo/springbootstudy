@@ -30,8 +30,8 @@ public class ApiController {
                 FieldError fieldError = (FieldError) e;
                 String message = e.getDefaultMessage();
 
-                sb.append("field : " + fieldError.getField());
-                sb.append("message : " + message);
+                sb.append("field : ").append(fieldError.getField());
+                sb.append("message : ").append(message);
             });
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(sb.toString());
         }
