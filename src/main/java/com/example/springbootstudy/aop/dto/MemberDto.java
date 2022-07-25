@@ -21,4 +21,5 @@ public class MemberDto {
     private Long id;
     private int age;
     private String name;
+    private String password;
 }

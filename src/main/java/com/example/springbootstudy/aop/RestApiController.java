@@ -1,6 +1,7 @@
 package com.example.springbootstudy.aop;
 
 import com.example.springbootstudy.aop.dto.MemberDto;
+import com.example.springbootstudy.aop.timeraop.annotation.Decode;
 import com.example.springbootstudy.aop.timeraop.annotation.Timer;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,5 +32,13 @@ public class RestApiController {
     @DeleteMapping("/delete")
     public void delete() throws InterruptedException {
         Thread.sleep(1000 * 2);;
+    }
+
+    @Decode
+    @PutMapping("/put")
+    public MemberDto put(@RequestBody MemberDto memberDto) {
+        System.out.println("method name : put");
+        System.out.println(memberDto);
+        return memberDto;
     }
 }
