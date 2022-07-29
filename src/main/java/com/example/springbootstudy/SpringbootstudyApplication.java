@@ -6,11 +6,13 @@ import com.example.springbootstudy.ioc.Mammal;
 import com.example.springbootstudy.ioc.Person;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.ApplicationContext;
 
 import java.util.Base64;
 
 @SpringBootApplication
+@ServletComponentScan
 public class SpringbootstudyApplication {
 
     public static void main(String[] args) {
