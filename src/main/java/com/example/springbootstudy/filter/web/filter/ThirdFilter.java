@@ -17,17 +17,11 @@ public class ThirdFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        log.info("세 번째 필터 생성");
     }
-
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        log.info("세 번째 필터 동작");
-        chain.doFilter(request, response);
     }
-
     @Override
     public void destroy() {
-        log.info("세 번째 필터 종료 됩니다.");
     }
 }

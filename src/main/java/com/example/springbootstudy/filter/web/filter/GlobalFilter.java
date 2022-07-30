@@ -21,7 +21,6 @@ import java.nio.charset.StandardCharsets;
  */
 
 @Slf4j
-@WebFilter(urlPatterns = "/api/v1/members")
 public class GlobalFilter implements Filter {
 
     @Override
@@ -33,6 +32,10 @@ public class GlobalFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         log.info("필터 동작");
         // 전처리
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+
+
         ContentCachingRequestWrapper httpRequest = new ContentCachingRequestWrapper((HttpServletRequest) request);
         ContentCachingResponseWrapper httpResponse = new ContentCachingResponseWrapper((HttpServletResponse) response);
 
