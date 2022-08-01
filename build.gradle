@@ -27,6 +27,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-aop'
     implementation 'com.h2database:h2:1.4.199'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.1'
+    implementation 'io.springfox:springfox-boot-starter:3.0.0'
 
     testImplementation 'com.h2database:h2:1.4.199'
     compileOnly 'org.projectlombok:lombok'
