@@ -18,7 +18,6 @@ import java.lang.invoke.MethodHandle;
  */
 
 @Slf4j
-@Component
 public class AuthInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
